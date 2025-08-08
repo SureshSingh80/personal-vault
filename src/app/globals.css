@@ -24,3 +24,38 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+/* responsive for keyValue Dashboard */
+@media screen and (max-width: 550px) {
+ 
+  .key-value-items {
+    flex-direction: column;
+   
+  }
+  .key-container {
+    margin-bottom: 50px;
+     
+  }
+  .key-container p{
+    font-size:15px;
+    text-align: center;
+  }
+  .value-container{
+    display:flex;
+    /* justify-content: flex-start; */
+    align-items:center;
+     
+  }
+}
+
+/* responsive for navbar (buttons) */
+@media screen and (max-width: 550px) {
+.button-container{
+ margin-right:0.5rem;
+ font-size:20px;
+
+}
+.button-container button{
+  font-size:13px;
+}
+
+}

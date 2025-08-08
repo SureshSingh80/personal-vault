@@ -1,3 +1,11 @@
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -18,12 +26,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <head>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=content_copy" />
+        </head>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+          
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
