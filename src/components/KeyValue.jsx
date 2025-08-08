@@ -52,7 +52,7 @@ const KeyValue = ({ keyValue,setKeyValue, userCredentials }) => {
   };
   return (
     <>
-      {keyValue.length > 0 ? (
+      {keyValue?.length > 0 ? (
         <div
           className={`w-full ${
             editPopUp || deletePopUp || addKeyValuePopUp ? "blur-sm" : ""
