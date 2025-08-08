@@ -6,7 +6,7 @@ export async function DELETE(request){
      try {
         await dbConnect();
         const {userCredentials,_id} = await request.json();
-        console.log("userCredentials= ",userCredentials," _id= ",_id);
+        // console.log("userCredentials= ",userCredentials," _id= ",_id);
         
             // Validate fields
             if (!userCredentials?._id || !_id) {

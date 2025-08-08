@@ -7,11 +7,11 @@ export async function POST(request){
     try {
         await dbConnect();
         const {key,value,userCredentials} = await request.json();
-        console.log("key= ",key," value= ",value," userCredentials= ",userCredentials);
+        // console.log("key= ",key," value= ",value," userCredentials= ",userCredentials);
 
         // encrypt value before saving in database using crypto-js
         const encryptedValue = CryptoJS.AES.encrypt(value, process.env.ENCRYPTION_KEY).toString();
-        console.log("encryptedValue= ",encryptedValue);
+        // console.log("encryptedValue= ",encryptedValue);
               
 
         // Validate fields
