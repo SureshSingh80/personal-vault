@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { useUser } from "@clerk/nextjs";
+import { useAuth, useUser, SignIn } from "@clerk/nextjs";
 import axios from "axios";
 import { set } from "mongoose";
 import Navbar from "@/components/Navbar";
@@ -11,6 +11,7 @@ import { motion } from "framer-motion";
 
 
 const page = () => {
+
   const { user, isLoaded } = useUser();
   const [userCredentials, setUserCredentials] = useState({});
   const [keyValue, setKeyValue] = useState([]);
